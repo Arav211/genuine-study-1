@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "todo": {
+      "title": "Todo",
+      "description": "A study task to be completed.",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["text", "completed", "userId", "createdAt"]
+    },
+    "flashcard": {
+      "title": "Flashcard",
+      "description": "A study card with a question and answer.",
+      "type": "object",
+      "properties": {
+        "question": { "type": "string" },
+        "answer": { "type": "string" },
+        "userId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["question", "answer", "userId", "createdAt"]
+    },
+    "note": {
+      "title": "Note",
+      "description": "A study note.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "userId": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "content", "userId", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "todos/{todoId}": {
+      "schema": "todo",
+      "description": "Collection of study todos."
+    },
+    "flashcards/{cardId}": {
+      "schema": "flashcard",
+      "description": "Collection of study flashcards."
+    },
+    "notes/{noteId}": {
+      "schema": "note",
+      "description": "Collection of study notes."
+    }
+  }
+}

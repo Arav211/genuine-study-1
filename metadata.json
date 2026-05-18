@@ -1,0 +1,8 @@
+{
+  "name": "Genuine Study",
+  "description": "An ultimate learning workspace with Pomodoro timers, AI-powered flashcards, intelligent notes, and a concept mapping visualization tool.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
